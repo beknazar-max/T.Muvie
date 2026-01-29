@@ -1,0 +1,179 @@
+header {
+    display: flex;
+    padding: 33px 24px 16px 32px;
+    background-color: #252525 ;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+
+nav.header-l {
+    display: flex;
+    gap: 11px
+}
+
+nav.header-l a {
+    text-decoration: none;
+    color: white;
+    padding: 9px 0;
+    font-size: 20px;
+    
+}
+
+a.active {
+    color: var(--color-yellow);
+    border-bottom:  2px solid var(--color-yellow);
+}
+
+div.header-r {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-yellow);
+    margin-left: auto;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.search {
+    min-width: 310px;
+    /* border: 1px solid red; */
+    background-color: #141414;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    padding-right: 14px;
+    gap: 8px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: azure;
+    padding: 13px 0;
+    flex-grow: 1;
+}
+
+.notification {
+    position: relative;
+}
+
+.notification .red-cirle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    border: 1.5px solid black;
+    padding: 2px;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+}
+
+.search,
+.profile,
+.notification img {
+  transition: transform 0.2s ease;
+}
+
+.search:focus-within {
+  transform: scale(1.02);
+}
+
+.profile:hover,
+.notification img:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+
+  nav.header-l a {
+    font-size: 18px;
+  }
+
+  .search {
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+
+  nav.header-l a {
+    font-size: 18px;
+  }
+
+  .search {
+    min-width: 240px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  nav.header-l {
+    order: 2;
+    overflow-x: auto;
+    gap: 16px;
+    scrollbar-width: none;
+  }
+
+  nav.header-l::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav.header-l a {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .header-r {
+    order: 1;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search {
+    width: 100%;
+    min-width: unset;
+    flex: 1;
+  }
+
+  .search input {
+    font-size: 14px;
+  }
+
+  .notification img {
+    width: 22px;
+  }
+
+  .profile {
+    width: 40px;
+    height: 40px;
+  }
+}
