@@ -30,7 +30,7 @@
     font-size: 18px;
     margin-bottom: 16px;
 }
-.black-div h3 img {
+.black-div h3 > img {
     width: 24px;
     height: 24px;
     margin-top: -1px;

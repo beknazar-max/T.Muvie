@@ -5,6 +5,7 @@
     background-color: #333;
     padding: 10px;
     position: relative;
+    display: flex;
 }
 .card-body {
     width: 100%;
@@ -31,8 +32,8 @@
     height: 12px;
 }
 .rating span {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 18px;
 }
 .card-footer{
     height: 59px;
